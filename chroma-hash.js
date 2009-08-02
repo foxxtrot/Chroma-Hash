@@ -4,6 +4,8 @@
  *
  * Copyright (c) 2009 Mattt Thompson
  * Licensed under the MIT licenses.
+ *
+ * YUI Revision Copyright (c) 2009 Jeff Craig
  */
 
 YUI.add('chroma-hash', function(Y) {
@@ -70,8 +72,8 @@ YUI.add('chroma-hash', function(Y) {
 	Y.mix(ChromaHash, {
 		NAME: "ChromaHash",
 		ATTRS : { },
-		add: function(node, bars) {
-			var b = bars || 3;
+		add: function(node, config) {
+			var c = config || { }, b = c.number || 3;
 			if (b < 1 || b > 4) {
 				Y.message("Bars argument must be between 1 and 4", "warn", "ChromaHash");
 			}

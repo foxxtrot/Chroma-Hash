@@ -12,7 +12,7 @@
 	<script type="text/javascript" charset="utf-8">
     YUI().use('node','chroma-hash', function(Y) {
     	Y.on('domready', function() {
-	    	Y.ChromaHash.add('input[type=password]');
+	    	Y.ChromaHash.add('input[type=password]', {number: 3});
 	    	Y.get('#username').focus();
 	    });
     });

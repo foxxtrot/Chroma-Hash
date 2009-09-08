@@ -12,7 +12,9 @@
 	<script type="text/javascript" charset="utf-8">
     YUI().use('node','chroma-hash', function(Y) {
       Y.on('domready', function() {
-        Y.ChromaHash.add('input[type=password]', {bars: 3, salt: "Chroma-Hash-YUI3", minimum: 5});
+				var ch_p = new Y.ChromaHash({node: '#password'}),
+						ch_cp =	new Y.ChromaHash({node: '#confirm-password'});
+				ch_p.render(); ch_cp.render();
         Y.get('#username').focus();
       });
     });
@@ -64,7 +66,7 @@
   </div>
   <div class="footer">
     <span class="copyright">&copy; <a href="http://twitter.com/mattt" title="@mattt" rel="me">Mattt Thompson</a> - Released Under an MIT License</span>
-    <span class="version">Last Revised: August 4, 2009</span>
+    <span class="version">Last Revised: August 12, 2009</span>
   </div>
       
 </body>
